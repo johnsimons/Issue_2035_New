@@ -1,0 +1,57 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ Assembly Name="EnvDTE" #>
+<#@ import namespace="EnvDTE" #> 
+<#@ include file="VisualStudioHelper.ttinclude" #> 
+
+using Model.Entity;
+using Model.Infrastructure;
+using Model.UnitOfWork; 
+using Model.UnitOfWork.Interface;
+using Model.Infrastructure.Interface;
+namespace Schroders.Crpt.Qir.Model.Repository
+{
+<#
+var project = VisualStudioHelper.CurrentProject; 
+var codeHelper = new VsCodeModel(VisualStudioHelper);  
+
+// get all class items from the code model
+var allClasses = codeHelper.GetAllCodeElementsOfType(project.CodeModel.CodeElements, EnvDTE.vsCMElement.vsCMElementClass, false);
+
+// iterate all classes
+foreach(EnvDTE.CodeClass codeClass in allClasses)
+{
+    if(!codeClass.Name.Contains("Repository") && !codeClass.Name.EndsWith("Configuration")){ 	
+	#>
+	public partial interface I<#= codeClass.Name #>Repository : IRepository<<#= codeClass.Name #>>{}
+
+	public partial class <#= codeClass.Name #>Repository : Repository<<#= codeClass.Name #>>, I<#= codeClass.Name #>Repository
+	{
+        public <#= codeClass.Name #>Repository(IQirUnitOfWork qirUnitOfWork)
+            : base(qirUnitOfWork)
+        {
+        }
+	}
+	<#
+	// iterate all properties
+    var allProperties = codeHelper.GetAllCodeElementsOfType(codeClass.Members, EnvDTE.vsCMElement.vsCMElementProperty, true);
+    foreach(var property in allProperties)
+    {
+		//WriteLine(property.ToString());
+		
+		//  // check if it is decorated with an "Input"-Attribute
+      //  if (property.Attributes.OfType<EnvDTE.CodeAttribute>().Any(a => a.FullName == "Input"))
+      //  {
+           
+
+      //  }
+    }
+    }
+}
+
+#>
+} // End Namespace

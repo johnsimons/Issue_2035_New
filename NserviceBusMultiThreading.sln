@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NserviceBusMultiThreading", "NserviceBusMultiThreading\NserviceBusMultiThreading.csproj", "{C2F8BEDE-4034-4CF5-A6F8-137723969D3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{4219052B-4678-418F-8180-2D88A445EB5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NserviceBusMultiThreadingPub", "NserviceBusMultiThreadingPub\NserviceBusMultiThreadingPub.csproj", "{14FE2B45-3D24-4FD7-8A1C-F2D9E7D8ECDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{96AE4007-0B2B-48C2-837F-AF4FE12A1880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{33394C0B-AAC4-49CF-975E-000941F2E03C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{A2834B35-48A1-43E5-BCAA-E5C90FB7222E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5CC713A3-2993-44D9-9E17-413345B1FCB7}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2F8BEDE-4034-4CF5-A6F8-137723969D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F8BEDE-4034-4CF5-A6F8-137723969D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F8BEDE-4034-4CF5-A6F8-137723969D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F8BEDE-4034-4CF5-A6F8-137723969D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4219052B-4678-418F-8180-2D88A445EB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4219052B-4678-418F-8180-2D88A445EB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4219052B-4678-418F-8180-2D88A445EB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4219052B-4678-418F-8180-2D88A445EB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14FE2B45-3D24-4FD7-8A1C-F2D9E7D8ECDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14FE2B45-3D24-4FD7-8A1C-F2D9E7D8ECDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14FE2B45-3D24-4FD7-8A1C-F2D9E7D8ECDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14FE2B45-3D24-4FD7-8A1C-F2D9E7D8ECDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96AE4007-0B2B-48C2-837F-AF4FE12A1880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96AE4007-0B2B-48C2-837F-AF4FE12A1880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96AE4007-0B2B-48C2-837F-AF4FE12A1880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96AE4007-0B2B-48C2-837F-AF4FE12A1880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33394C0B-AAC4-49CF-975E-000941F2E03C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33394C0B-AAC4-49CF-975E-000941F2E03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33394C0B-AAC4-49CF-975E-000941F2E03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33394C0B-AAC4-49CF-975E-000941F2E03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2834B35-48A1-43E5-BCAA-E5C90FB7222E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2834B35-48A1-43E5-BCAA-E5C90FB7222E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2834B35-48A1-43E5-BCAA-E5C90FB7222E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2834B35-48A1-43E5-BCAA-E5C90FB7222E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
